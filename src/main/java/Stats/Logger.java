@@ -12,16 +12,12 @@ public class Logger {
 
     public static void saveCharacterToFile(Character completeCharacter) {
         LocalDateTime date = LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES);
-        String fileName = completeCharacter.getName() + "_stats_" + date + ".txt";
+        String dateString = date.toString().replace(':', 'm');
+        dateString += 's';
+        String fileName = completeCharacter.getName() + "_stats_" + dateString + ".txt";
         File file = new File(fileName);
 
-        try {
-            file.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try (PrintWriter pw = new PrintWriter(file)) {
+        try (PrintWriter pw = new PrintWriter(file.getAbsoluteFile())) {
             pw.println("Character: " + completeCharacter.getName());
             pw.println("---------------------------");
             pw.println("         Stats");

@@ -57,9 +57,11 @@ public class Character {
     }
 
     private String getModifier(Integer rawNum) {
-        //TODO: MAKE SURE THIS PRINTS NEGATIVE VALUES RIGHT
         String modifier = "[";
         rawNum = (rawNum - 10) / 2;
+
+        if (rawNum >= 0) modifier += "+";
+
         modifier += Integer.toString(rawNum);
         modifier += "]";
 
