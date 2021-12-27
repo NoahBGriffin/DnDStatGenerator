@@ -18,6 +18,7 @@ public class UserInput {
     public static String getStatSortOption() {
         boolean validInput = false;
         String choice = "";
+
         while (!validInput) {
             System.out.print("Begin with (L)owest or (H)ighest stat?: ");
             choice = input.nextLine().toLowerCase().trim();

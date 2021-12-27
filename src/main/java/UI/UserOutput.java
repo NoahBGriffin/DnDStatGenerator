@@ -34,6 +34,7 @@ public class UserOutput {
         else if (sum > 75) System.out.println("Really good!");
 
         UserInput.getGenericInput();
+
     }
 
     public static int printStatNumsAndGetSum(List<Integer> stats) {

@@ -51,7 +51,10 @@ public class Character {
         String statString = "";
         for (Map.Entry<String, Integer> stat : stats.entrySet()) {
             String modifier = getModifier(stat.getValue());
-            statString += stat.getKey() + " = [" + stat.getValue() + "], Modifier: " + modifier + "\n";
+
+            statString += String.format("%1$-13s", stat.getKey() + " = [" + stat.getValue() + "], " ) +
+                    "Modifier: " + modifier + "\n";
+
         }
         return statString;
     }
@@ -60,9 +63,7 @@ public class Character {
         String modifier = "[";
         rawNum = (rawNum - 10) / 2;
 
-        if (rawNum >= 0) modifier += "+";
-
-        modifier += Integer.toString(rawNum);
+        modifier += String.format("%+d", rawNum);
         modifier += "]";
 
         return modifier;

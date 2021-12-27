@@ -1,0 +1,11 @@
+Character: zadiel
+---------------------------
+         Stats
+---------------------------
+STR = [8],   Modifier: [-1]
+WIS = [13],  Modifier: [+1]
+CON = [18],  Modifier: [+4]
+DEX = [14],  Modifier: [+2]
+CHA = [12],  Modifier: [+1]
+INT = [12],  Modifier: [+1]
+
