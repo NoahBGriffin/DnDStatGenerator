@@ -1,0 +1,11 @@
+Character: unnamed
+---------------------------
+         Stats
+---------------------------
+STR = [14],  Modifier: [+2]
+WIS = [11],  Modifier: [+0]
+CON = [12],  Modifier: [+1]
+DEX = [16],  Modifier: [+3]
+CHA = [10],  Modifier: [+0]
+INT = [11],  Modifier: [+0]
+
