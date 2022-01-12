@@ -15,7 +15,7 @@ public class Logger {
         String dateString = date.toString().replace(':', 'm');
         dateString += 's';
         String fileName = completeCharacter.getName() + "_stats_" + dateString + ".txt";
-        File file = new File(fileName);
+        File file = new File("character_logs/" + fileName);
 
         try (PrintWriter pw = new PrintWriter(file.getAbsoluteFile())) {
             pw.println("Character: " + completeCharacter.getName());
@@ -24,7 +24,7 @@ public class Logger {
             pw.println("---------------------------");
             pw.println(completeCharacter.toString());
 
-            System.out.println("File successfully saved to " + fileName);
+            System.out.println("File successfully saved to " + fileName + " and placed in the character_logs folder");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
